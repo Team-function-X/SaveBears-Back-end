@@ -14,7 +14,6 @@ from pathlib import Path
 import os
 import json
 import sys
-from datetime import timedelta
 
 DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -47,7 +46,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "django.contrib.sites",
+    # My App
+    "challenges",
+    # Rest Framework
+    "rest_framework",
 ]
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
