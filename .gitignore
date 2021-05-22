@@ -78,6 +78,7 @@ pytestdebug.log
 # Flask stuff:
 instance/
 .webassets-cache
+.vscode
 
 # Scrapy stuff:
 .scrapy
