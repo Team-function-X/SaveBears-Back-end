@@ -11,7 +11,7 @@ services:
     depends_on:
       - web
   web:
-    image: pcj0198/savebears:latest
+    image: pcj0198/savebearsaws:latest
     container_name: web
     command: gunicorn --bind 0.0.0.0:8000 savebears.wsgi:application
     volumes:

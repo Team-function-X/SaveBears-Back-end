@@ -1,5 +1,5 @@
 # python 3.8 설치
-FROM python:3.8
+FROM python:3.8.10
 # 장고 파일 설치경로
 WORKDIR /usr/src/app
 

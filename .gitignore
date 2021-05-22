@@ -25,7 +25,7 @@ secrets.json
 
 # C extensions
 *.so
-
+savebear-dba/data
 # Distribution / packaging
 .Python
 build/
