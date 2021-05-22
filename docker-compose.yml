@@ -1,0 +1,35 @@
+version: "2"
+services:
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80/tcp"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./static_savebear:/staticfiles
+    depends_on:
+      - web
+  web:
+    image: pcj0198/savebear:latest
+    container_name: web
+    command: gunicorn --bind 0.0.0.0:8000 savebear.wsgi:application
+    volumes:
+      - ./static_savebear:/usr/src/app/staticfiles
+    expose:
+      - "8000"
+    depends_on:
+      - db
+  db:
+    image: mariadb:latest
+    container_name: mysql
+    expose:
+      - "3306"
+    environment:
+      MYSQL_DATABASE: savebear_db
+      MYSQL_USER: ubuntu
+      MYSQL_PASSWORD: ckswhd123~
+      MYSQL_ROOT_PASSWORD: ckswhd123~
+    volumes:
+      - ./savebear-db/data:/var/lib/mysql
+      - ./savebear-db/data/conf.d:/etc/mysql/conf.d
