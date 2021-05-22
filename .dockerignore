@@ -1,0 +1,8 @@
+# Dockerfile
+
+
+venv/
+migrations/
+.vscode/
+docker-compose.yml
+admin/
