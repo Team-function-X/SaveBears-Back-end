@@ -54,7 +54,8 @@ MANIFEST
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
-
+admin/
+rest_framework
 # Unit test / coverage reports
 htmlcov/
 .tox/
